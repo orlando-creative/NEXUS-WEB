@@ -1,0 +1,127 @@
+    * {
+    margin: 0;
+    box-sizing: border-box;
+    }
+
+    body {
+    font-family: sans-serif;
+    padding: 90px 20px 0;
+    }
+
+    .header {
+    background-color: #073e65;
+    height: 80px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    }
+
+    .nav {
+    display: flex;
+    justify-content: space-between;
+
+    max-width: 992px;
+    margin: 0 auto;
+    }
+
+    .nav-link {
+    color: white;
+    text-decoration: none;
+    }
+
+    .logo {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 80px;
+    }
+
+    .nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+    }
+
+    .nav-menu-item {
+    font-size: 18px;
+    margin: 0 10px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+    }
+
+    .nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+    }
+
+    .nav-menu-link:hover,
+    .nav-menu-link_active {
+    background-color: #06273e;
+    transition: 0.5s;
+    }
+
+    /* TOGGLE */
+    .nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    cursor: pointer;
+
+    display: none;
+    }
+
+    /* estilos para inicio */
+    .inicio {
+    height: 500px;
+    max-width: 992px;
+    margin: 0 auto;text-align: center;
+    background-image: url('https://elcomercio.pe/resizer/v2/J52XP74BJZEZDJIY3WJ4UZ2SAE.jpg?auth=441166d7c7df04744b80eb7ca3a2960ad222686b2794cff40f79364296eec529&width=980&height=528&quality=75&smart=true');
+    background-position: center;
+    color: #222;
+    font-size: 30px;
+    padding: 60px 20px;
+    }
+
+
+
+    /* estilos para movil */
+    @media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+
+    .header {
+        height: 70px;
+    }
+    .inicio{
+        padding: 50px 20px;
+        font-size: 25px;
+        background-position: center;
+    }
+    .logo {
+        font-size: 25px;
+        padding: 0 20px;
+        line-height: 60px;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        top: 60px;
+        width: 100%;
+        padding: 20px 0;
+        left: 100%;
+        transition: left 0.3s;
+    }
+
+    .nav-menu-item {
+        line-height: 70px;
+    }
+    
+}
