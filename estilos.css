@@ -1,36 +1,128 @@
-    * {
+/* ===============================
+    PALETA DE COLORES (EDITABLE)
+================================ */
+:root {
+    --color-principal: #0078d4;
+    --color-secundario: #005fa3;
+    --color-fondo: #f5f7fa;
+    --color-texto: #222;
+    --color-blanco: #fff;
+    --color-gris: #e3e6ea;
+}
+
+/* ===============================
+    ESTILOS GLOBALES
+================================ */
+* {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    }
+    font-family: "Poppins", sans-serif;
+}
 
-    body {
-    font-family: sans-serif;
-    padding: 90px 20px 0;
-    }
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
 
-    .header {
-    background-color: #073e65;
-    height: 80px;
-    position: fixed;
-    width: 100%;
+/* ===============================
+    NAVBAR
+================================ */
+.header {
+    background: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 1rem 2rem;
+    position: sticky;
     top: 0;
-    left: 0;
-    }
+    z-index: 1000;
+}
 
-    /* Estilos de la carta */
-    .card {
-    width: 300px;
-    background: #ffffff;
-    border-radius: 16px;
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-blanco);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-menu-link {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+    color: var(--color-gris);
+}
+
+/* ===============================
+    SECCIÓN PRINCIPAL
+================================ */
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.inicio {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.inicio h1 {
+    color: var(--color-principal);
+    margin-bottom: 0.5rem;
+}
+
+.inicio p {
+    font-size: 1.1rem;
+}
+
+/* ===============================
+    CARDS DE PRODUCTOS
+================================ */
+.conteiner {
+    margin-top: 2rem;
+}
+
+.conteiner h2 {
+    text-align: center;
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: var(--color-blanco);
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    font-family: Arial, sans-serif;
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.20);
+    transform: scale(1.03);
 }
 
 .card-img {
@@ -40,158 +132,68 @@
 }
 
 .card-body {
-    padding: 15px;
+    padding: 1rem;
 }
 
 .card-title {
-    font-size: 20px;
-    margin-bottom: 8px;
-    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--color-principal);
+    margin-bottom: 0.5rem;
 }
 
 .card-description {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 12px;
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
 }
 
 .card-price {
-    font-size: 18px;
     font-weight: bold;
-    margin-bottom: 12px;
-    color: #1a73e8;
+    color: var(--color-secundario);
+    margin-bottom: 0.8rem;
 }
 
 .card-btn {
-    width: 100%;
-    padding: 10px;
-    background: #1a73e8;
-    color: white;
+    background: var(--color-principal);
+    color: var(--color-blanco);
     border: none;
-    border-radius: 8px;
-    font-size: 16px;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background 0.2s ease;
+    width: 100%;
+    transition: background 0.3s ease;
 }
 
 .card-btn:hover {
-    background: #135aba;
+    background: var(--color-secundario);
 }
-/* CONTENEDOR DE PRODUCTOS */
-    .productos{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    width: 100%;
-    box-sizing: border-box;
+
+/* ===============================
+    FOOTER
+================================ */
+footer {
+    background: var(--color-principal);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
 }
+
+/* ===============================
+    RESPONSIVE
+================================ */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
 
     .nav {
-    display: flex;
-    justify-content: space-between;
-
-    max-width: 992px;
-    margin: 0 auto;
+        flex-direction: column;
     }
 
-    .nav-link {
-    color: white;
-    text-decoration: none;
+    main {
+        padding: 1rem;
     }
-
-    .logo {
-    font-size: 30px;
-    font-weight: bold;
-    padding: 0 40px;
-    line-height: 80px;
-    }
-
-    .nav-menu {
-    display: flex;
-    margin-right: 40px;
-    list-style: none;
-    }
-
-    .nav-menu-item {
-    font-size: 18px;
-    margin: 0 10px;
-    line-height: 80px;
-    text-transform: uppercase;
-    width: max-content;
-    }
-
-    .nav-menu-link {
-    padding: 8px 12px;
-    border-radius: 3px;
-    }
-
-    .nav-menu-link:hover,
-    .nav-menu-link_active {
-    background-color: #06273e;
-    transition: 0.5s;
-    }
-
-    /* TOGGLE */
-    .nav-toggle {
-    color: white;
-    background: none;
-    border: none;
-    font-size: 30px;
-    padding: 0 20px;
-    line-height: 60px;
-    cursor: pointer;
-
-    display: none;
-    }
-
-    /* estilos para inicio */
-    .inicio {
-    height: 500px;
-    max-width: 992px;
-    margin: 0 auto;text-align: center;
-    background-image: url('https://elcomercio.pe/resizer/v2/J52XP74BJZEZDJIY3WJ4UZ2SAE.jpg?auth=441166d7c7df04744b80eb7ca3a2960ad222686b2794cff40f79364296eec529&width=980&height=528&quality=75&smart=true');
-    background-position: center;
-    color: #222;
-    font-size: 30px;
-    padding: 60px 20px;
-    }
-
-
-
-    /* estilos para movil */
-    @media (max-width: 768px) {
-    body {
-        padding-top: 80px;
-    }
-
-    .header {
-        height: 70px;
-    }
-    .inicio{
-        padding: 50px 20px;
-        font-size: 25px;
-        background-position: center;
-    }
-    .logo {
-        font-size: 25px;
-        padding: 0 20px;
-        line-height: 60px;
-    }
-
-    .nav-menu {
-        display: flex;
-        flex-direction: row;
-        margin: 0;
-        top: 60px;
-        width: 100%;
-        padding: 20px 0;
-        left: 100%;
-        transition: left 0.3s;
-    }
-
-    .nav-menu-item {
-        line-height: 70px;
-    }
-    
 }
