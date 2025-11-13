@@ -3,64 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros | NEXUS WEB</title>
+    <title>Nombre de la Empresa - Nosotros</title>
+    <meta name="description" content="Conoce más sobre nuestra historia, misión y al equipo.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-<header class="header">
-    <nav class="nav">
-        <a href="index.html" class="logo nav-link">LOGO</a>
+
+    <header class="header">
+    <nav class="nav container">
+        <a href="index.html" class="logo">
+            <!-- Opción 1: Logo como Texto -->
+            TuLogo
+            
+            <!-- Opción 2: Logo como Imagen -->
+            <!-- <img src="https://placehold.co/150x50/0078d4/FFFFFF?text=TuLogo" alt="Logo de la Empresa" class="logo-img"> -->
+        </a>
+        
+        <!-- Checkbox invisible para controlar el menú -->
+        <input type="checkbox" id="nav-toggle-checkbox" class="nav-toggle-checkbox">
+        
+        <!-- Label que simula el botón hamburguesa -->
+        <label for="nav-toggle-checkbox" class="nav-toggle" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
+        <!-- El menú ahora se controlará por el checkbox -->
         <ul class="nav-menu">
-            <li><a href="catalogo.html" class="nav-menu-link">Catálogo</a></li>
-            <li><a href="nosotros.html" class="nav-menu-link nav-menu-link_active">Nosotros</a></li>
-            <li><a href="contacto.html" class="nav-menu-link">Contacto</a></li>
+            <!-- Para index.html -->
+            <li class="nav-menu-item"><a href="index.html" class="nav-menu-link active">Inicio</a></li>
+            <!-- Para catalogo.html, quita 'active' de aquí y ponlo en el siguiente -->
+            <li class="nav-menu-item"><a href="catalogo.html" class="nav-menu-link">Catálogo</a></li>
+            <li class="nav-menu-item"><a href="nosotros.html" class="nav-menu-link">Nosotros</a></li>
+            <li class="nav-menu-item"><a href="contacto.html" class="nav-menu-link">Contacto</a></li>
         </ul>
     </nav>
 </header>
 
-<main>
-    <div class="inicio">
-        <h1>Sobre Nosotros</h1>
-        <p>Aqui se epicifica a que se dedica la empresa</p>
-    </div>
-    <div class="conteiner">
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci quisquam itaque aut pariatur nam quae 
-            culpa deserunt. Corporis ut ab eius, sunt, sint voluptatum eum id architecto consequuntur qui
-            temporibus?</p>
-    </div>
+    <main>
+        
+        <section class="page-header">
+            <div class="container">
+                <h1>Sobre Nosotros</h1>
+            </div>
+        </section>
 
-    <div class="container_redes">
-        <h2>Nuestras Redes Sociales</h2>
-        <p>Síguenos en nuestras redes sociales para estar al tanto de las últimas novedades y ofertas.</p>
-        <div class="redes-sociales">
-            <!-- facebook -->
-                <a href=# class="redes-sociales-link">
-                    <div class="icono">
-                        <i class="fab fa-facebook-f text-4xl text-white"></i>
-                    </div>
+        <!-- ===============================
+             SECCIÓN "QUIÉNES SOMOS"
+        ================================ -->
+        <section class="about-section container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://placehold.co/600x400/eeeeee/333333?text=Foto+Empresa" alt="Foto de la empresa" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Foto+Empresa'">
+                </div>
+                <div class="about-text">
+                    <h2>Nuestra Historia</h2>
+                    <p>
+                        Aquí va la historia de la empresa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p>
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mission-vision">
+                <div class="card-mv">
+                    <h3>Misión</h3>
+                    <p>Texto de la misión de la empresa. Ser los líderes en...</p>
+                </div>
+                <div class="card-mv">
+                    <h3>Visión</h3>
+                    <p>Texto de la visión de la empresa. Para el 2030 queremos...</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ===============================
+            REDES SOCIALES
+        ================================ -->
+        <section class="social-section container">
+            <h2>Síguenos en Redes</h2>
+            <div class="social-links">
+                
+                <!-- Facebook -->
+                <a href="httpsPOST://facebook.com/tu-empresa" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook social-icon"></i>
                     <span>Facebook</span>
                 </a>
                 
-                <a href=# class="redes-sociales-link">
-                    <div class="icono">
-                        <i class="fab fa-instagram text-4xl text-white"></i>
-                    </div>
+                <!-- Instagram -->
+                <a href="https://instagram.com/tu-empresa" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram social-icon"></i>
                     <span>Instagram</span>
                 </a>
-                <a href=# class="redes-sociales-link">
-                    <div class="icono">
-                        <i class="fab fa-facebook-f text-4xl text-white"></i>
-                    </div>
-                    <span>Facebook</span>
+
+                <!-- TikTok -->
+                <a href="httpsPOST://tiktok.com/@tu-empresa" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok social-icon"></i>
+                    <span>TikTok</span>
                 </a>
-
+                
             </div>
-    </div>
-</main>
+        </section>
 
-<footer>
-    © 2025 NEXUS WEB | Todos los derechos reservados.
-</footer>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 <span class="empresa-placeholder">[Nombre de la Empresa]</span> | Todos los derechos reservados.</p>
+            <p>Diseñado por <span class="tu-empresa-placeholder">[Nombre de Tu Empresa]</span></p>
+        </div>
+    </footer>
+
 </body>
 </html>

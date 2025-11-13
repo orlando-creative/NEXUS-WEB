@@ -3,25 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto | NEXUS WEB</title>
+    <title>Nombre de la Empresa - Contacto</title>
+
+    <meta name="description" content="Ponte en contacto con nosotros. Encuentra nuestra ubicación y números.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-<header class="header">
-    <nav class="nav">
-        <a href="index.html" class="logo nav-link">LOGO</a>
+
+    <header class="header">
+    <nav class="nav container">
+        <a href="index.html" class="logo">
+            <!-- Opción 1: Logo como Texto -->
+            TuLogo
+            
+            <!-- Opción 2: Logo como Imagen -->
+            <!-- <img src="https://placehold.co/150x50/0078d4/FFFFFF?text=TuLogo" alt="Logo de la Empresa" class="logo-img"> -->
+        </a>
+        
+        <!-- Checkbox invisible para controlar el menú -->
+        <input type="checkbox" id="nav-toggle-checkbox" class="nav-toggle-checkbox">
+        
+        <!-- Label que simula el botón hamburguesa -->
+        <label for="nav-toggle-checkbox" class="nav-toggle" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
+        <!-- El menú ahora se controlará por el checkbox -->
         <ul class="nav-menu">
-            <li><a href="catalogo.html" class="nav-menu-link">Catálogo</a></li>
-            <li><a href="nosotros.html" class="nav-menu-link">Nosotros</a></li>
-            <li><a href="contacto.html" class="nav-menu-link nav-menu-link_active">Contacto</a></li>
+            <!-- Para index.html -->
+            <li class="nav-menu-item"><a href="index.html" class="nav-menu-link active">Inicio</a></li>
+            <!-- Para catalogo.html, quita 'active' de aquí y ponlo en el siguiente -->
+            <li class="nav-menu-item"><a href="catalogo.html" class="nav-menu-link">Catálogo</a></li>
+            <li class="nav-menu-item"><a href="nosotros.html" class="nav-menu-link">Nosotros</a></li>
+            <li class="nav-menu-item"><a href="contacto.html" class="nav-menu-link">Contacto</a></li>
         </ul>
     </nav>
 </header>
 
+    <main>
+        
+        <section class="page-header">
+            <div class="container">
+                <h1>Contáctanos</h1>
+            </div>
+        </section>
 
+        <section class="contact-section container">
+            <div class="contact-grid">
+                
+                <!-- Columna de Información -->
+                <div class="contact-info">
+                    <h2>Información de Contacto</h2>
+                    <p>
+                        Ponte en contacto con nosotros a través de cualquiera de estos medios. 
+                        ¡Estamos listos para ayudarte!
+                    </p>
+                    
+                    <ul class="info-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>[Dirección de la Empresa, Calle, Nro, Ciudad]</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span><a href="mailto:info@empresa.com">info@empresa.com</a></span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span><a href="tel:+59177777777">+591 777 77777</a></span>
+                        </li>
+                    </ul>
 
-<footer>
-    © 2025 NEXUS WEB | Todos los derechos reservados.
-</footer>
+                    <h3>Escríbenos por WhatsApp</h3>
+                    <p>Haz clic en un enlace para iniciar un chat:</p>
+                    
+                    <!-- Enlace 1: WhatsApp Empresa -->
+                    <a href="httpsPOST://wa.me/591XXXXXXXXX?text=Hola,%20me%20interesan%20sus%20productos." class="whatsapp-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp social-icon"></i>
+                        <span>Atención al Cliente</span>
+                    </a>
+                    
+                    <!-- Enlace 2: WhatsApp Dueño/Ventas -->
+                    <a href="httpsPOST://wa.me/591YYYYYYYYY?text=Hola,%20quisiera%20hablar%20con%20el%20propietario." class="whatsapp-link" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-whatsapp social-icon"></i>
+                        <span>Ventas / Propietario</span>
+                    </a>
+                    
+                </div>
+                
+                <!-- Columna de Mapa -->
+                <div class="contact-map">
+                    <h2>Nuestra Ubicación</h2>
+                    <div class="map-container">
+                        <!-- 
+                          IMPORTANTE: 
+                          El cliente debe generar su propio 'iframe' en Google Maps.
+                          Este es un placeholder de la Plaza 24 de Septiembre en Santa Cruz.
+                        -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3799.479532857413!2d-63.1821035850904!3d-17.78328108784869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e78045958661%3A0x6b4c6e52290f6e1a!2sPlaza%2024%20de%20Septiembre!5e0!3m2!1ses!2sbo!4v1678888888888!5m2!1ses!2sbo" 
+                            width="600" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 <span class="empresa-placeholder">[Nombre de la Empresa]</span> | Todos los derechos reservados.</p>
+            <p>Diseñado por <span class="tu-empresa-placeholder">[Nombre de Tu Empresa]</span></p>
+        </div>
+    </footer>
+
 </body>
 </html>

@@ -3,65 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEXUS WEB</title>
+    <title>Nombre de la Empresa - Inicio</title>
+    <meta name="description" content="Descripción breve y atractiva de la empresa cliente.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
+
 <header class="header">
-    <nav class="nav">
-        <a href="index.html" class="logo nav-link">LOGO</a>
+    <nav class="nav container">
+        <a href="index.html" class="logo">
+            <!-- Opción 1: Logo como Texto -->
+            TuLogo
+            
+            <!-- Opción 2: Logo como Imagen -->
+            <!-- <img src="https://placehold.co/150x50/0078d4/FFFFFF?text=TuLogo" alt="Logo de la Empresa" class="logo-img"> -->
+        </a>
+        
+        <!-- Checkbox invisible para controlar el menú -->
+        <input type="checkbox" id="nav-toggle-checkbox" class="nav-toggle-checkbox">
+        
+        <!-- Label que simula el botón hamburguesa -->
+        <label for="nav-toggle-checkbox" class="nav-toggle" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
+        <!-- El menú ahora se controlará por el checkbox -->
         <ul class="nav-menu">
-            <li><a href="catalogo.html" class="nav-menu-link">Catálogo</a></li>
-            <li><a href="nosotros.html" class="nav-menu-link">Nosotros</a></li>
-            <li><a href="contacto.html" class="nav-menu-link">Contacto</a></li>
+            <!-- Para index.html -->
+            <li class="nav-menu-item"><a href="index.html" class="nav-menu-link active">Inicio</a></li>
+            <!-- Para catalogo.html, quita 'active' de aquí y ponlo en el siguiente -->
+            <li class="nav-menu-item"><a href="catalogo.html" class="nav-menu-link">Catálogo</a></li>
+            <li class="nav-menu-item"><a href="nosotros.html" class="nav-menu-link">Nosotros</a></li>
+            <li class="nav-menu-item"><a href="contacto.html" class="nav-menu-link">Contacto</a></li>
         </ul>
     </nav>
 </header>
 
-<main>
-    <div class="inicio">
-        <h1>Bienvenido a NEXUS WEB</h1>
-        <p>Explora nuestro catálogo y conoce más sobre nosotros.</p>
-    </div>
+    <main>
+        <!-- ===============================
+            SECCIÓN HERO (PORTADA)
+        ================================ -->
+        <section class="hero">
+            <div class="hero-content container">
+                <h1>El Título Principal de la Empresa</h1>
+                <p>Un eslogan o descripción corta que capture la esencia del negocio.</p>
+                <a href="contacto.html" class="btn btn-primary">Contáctanos Ahora</a>
+            </div>
+        </section>
 
-    <div class="conteiner">
-        <h2>Productos Destacados</h2>
-        <p style="text-align:center;">Una selección de nuestros productos más populares.</p>
+        <!-- ===============================
+            PRODUCTOS DESTACADOS
+        ================================ -->
+        <section class="featured-products container">
+            <h2>Productos Destacados</h2>
+            <p class="section-description">Una selección de nuestros productos o servicios más populares.</p>
 
-        <div class="productos">
-            <div class="card">
-                <img src="https://florescercademi.mx/wp-content/uploads/2024/09/ramo-de-gerberas-y-rosas.webp" alt="Producto" class="card-img">
-                <div class="card-body">
-                    <h3 class="card-title">Ramo Floral</h3>
-                    <p class="card-description">Elegante ramo de gerberas y rosas frescas.</p>
-                    <div class="card-price">Bs. 120</div>
-                    <button class="card-btn">Comprar</button>
+            <div class="product-grid">
+                <!-- Producto 1 (Placeholder) -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/eeeeee/333333?text=Producto+1" alt="Producto 1" class="card-img" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Producto+1'">
+                    <div class="card-body">
+                        <h3 class="card-title">Nombre del Producto/Servicio</h3>
+                        <p class="card-description">Descripción corta y vendedora del producto.</p>
+                        <div class="card-price">Bs. 100</div>
+                        <a href="contacto.html" class="card-btn">Consultar</a>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 (Placeholder) -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/eeeeee/333333?text=Producto+2" alt="Producto 2" class="card-img" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Producto+2'">
+                    <div class="card-body">
+                        <h3 class="card-title">Nombre del Producto/Servicio</h3>
+                        <p class="card-description">Descripción corta y vendedora del producto.</p>
+                        <div class="card-price">Bs. 120</div>
+                        <a href="contacto.html" class="card-btn">Consultar</a>
+                    </div>
+                </div>
+
+                <!-- Producto 3 (Placeholder) -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/eeeeee/333333?text=Producto+3" alt="Producto 3" class="card-img" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Producto+3'">
+                    <div class="card-body">
+                        <h3 class="card-title">Nombre del Producto/Servicio</h3>
+                        <p class="card-description">Descripción corta y vendedora del producto.</p>
+                        <div class="card-price">Bs. 150</div>
+                        <a href="contacto.html" class="card-btn">Consultar</a>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="" alt="Producto" class="card-img">
-                <div class="card-body">
-                    <h3 class="card-title">Nombre del producto</h3>
-                    <p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, neque?.</p>
-                    <div class="card-price">Bs. 85</div>
-                    <button class="card-btn">Comprar</button>
-                </div>
+            
+            <div class="text-center">
+                <a href="catalogo.html" class="btn btn-secondary">Ver Catálogo Completo</a>
             </div>
-            <div class="card">
-                <img src="" alt="Producto" class="card-img">
-                <div class="card-body">
-                    <h3 class="card-title">Nombre del producto</h3>
-                    <p class="card-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo, optio?</p>
-                    <div class="card-price">Bs. 150</div>
-                    <button class="card-btn">Comprar</button>
-                </div>
-            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 <span class="empresa-placeholder">[Nombre de la Empresa]</span> | Todos los derechos reservados.</p>
+            <p>Diseñado por <span class="tu-empresa-placeholder">[Nombre de Tu Empresa]</span></p>
         </div>
-    </div>
-</main>
-
-<footer>
-    © 2025 NEXUS WEB | Todos los derechos reservados.
-</footer>
+    </footer>
 </body>
 </html>

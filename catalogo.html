@@ -3,109 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo | NEXUS WEB</title>
+    <title>Nombre de la Empresa - Catálogo</title>
+    <meta name="description" content="Explora nuestro catálogo completo de productos y servicios.">
+    
     <link rel="stylesheet" href="estilos.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-<header class="header">
-    <nav class="nav">
-        <a href="index.html" class="logo nav-link">LOGO</a>
+
+    <header class="header">
+    <nav class="nav container">
+        <a href="index.html" class="logo">
+            <!-- Opción 1: Logo como Texto -->
+            TuLogo
+            
+            <!-- Opción 2: Logo como Imagen -->
+            <!-- <img src="https://placehold.co/150x50/0078d4/FFFFFF?text=TuLogo" alt="Logo de la Empresa" class="logo-img"> -->
+        </a>
+        
+        <!-- Checkbox invisible para controlar el menú -->
+        <input type="checkbox" id="nav-toggle-checkbox" class="nav-toggle-checkbox">
+        
+        <!-- Label que simula el botón hamburguesa -->
+        <label for="nav-toggle-checkbox" class="nav-toggle" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+
+        <!-- El menú ahora se controlará por el checkbox -->
         <ul class="nav-menu">
-            <li><a href="catalogo.html" class="nav-menu-link nav-menu-link_active">Catálogo</a></li>
-            <li><a href="nosotros.html" class="nav-menu-link">Nosotros</a></li>
-            <li><a href="contacto.html" class="nav-menu-link">Contacto</a></li>
+            <!-- Para index.html -->
+            <li class="nav-menu-item"><a href="index.html" class="nav-menu-link active">Inicio</a></li>
+            <!-- Para catalogo.html, quita 'active' de aquí y ponlo en el siguiente -->
+            <li class="nav-menu-item"><a href="catalogo.html" class="nav-menu-link">Catálogo</a></li>
+            <li class="nav-menu-item"><a href="nosotros.html" class="nav-menu-link">Nosotros</a></li>
+            <li class="nav-menu-item"><a href="contacto.html" class="nav-menu-link">Contacto</a></li>
         </ul>
     </nav>
 </header>
 
-<main>
-    <div class="inicio">
-        <h1>Catálogo de Productos</h1>
-        <p>Descubre todos nuestros productos disponibles.</p>
-    </div>
-    <div class="conteiner">
-        <div class="productos">
-            <!-- ###### PRODUCTO ##### -->
-            <div class="card">
-                <img src="https://via.placeholder.com/300x200" alt="Producto" class="card-img">
-                <div class="card-body">
-                    <h3 class="card-title">Producto 1</h3>
-                    <p class="card-description">Descripción breve del producto.</p>
-                    <div class="card-price">Bs. 100</div>
-                    <button class="card-btn">Comprar</button>
-                </div>
+    <main>
+        
+        <section class="page-header">
+            <div class="container">
+                <h1>Nuestro Catálogo</h1>
             </div>
+        </section>
+        
+        <section class="catalog-section container">
+            <p class="section-description">
+                Aquí la empresa cliente puede listar todos sus productos o servicios. 
+                La plantilla está lista para crecer.
+            </p>
 
-            <div class="card">
-                <img src="https://via.placeholder.com/300x200" alt="Producto" class="card-img">
-                <div class="card-body">
-                    <h3 class="card-title">Producto 2</h3>
-                    <p class="card-description">Descripción breve del producto.</p>
-                    <div class="card-price">Bs. 80</div>
-                    <button class="card-btn">Comprar</button>
+            <div class="product-grid">
+                
+                <!-- Producto 1 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/eeeeee/333333?text=Producto+1" alt="Producto 1" class="card-img" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Producto+1'">
+                    <div class="card-body">
+                        <h3 class="card-title">Producto/Servicio 1</h3>
+                        <p class="card-description">Descripción corta y vendedora.</p>
+                        <div class="card-price">Bs. 100</div>
+                        <a href="contacto.html" class="card-btn">Consultar</a>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300x200" alt="Producto" class="card-img">
-                <div class="card-body">
-                    <h3 class="card-title">Producto 2</h3>
-                    <p class="card-description">Descripción breve del producto.</p>
-                    <div class="card-price">Bs. 80</div>
-                    <button class="card-btn">Comprar</button>
+                
+                <!-- Producto 2 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/eeeeee/333333?text=Producto+2" alt="Producto 2" class="card-img" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Producto+2'">
+                    <div class="card-body">
+                        <h3 class="card-title">Producto/Servicio 2</h3>
+                        <p class="card-description">Descripción corta y vendedora.</p>
+                        <div class="card-price">Bs. 120</div>
+                        <a href="contacto.html" class="card-btn">Consultar</a>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300x200" alt="Producto" class="card-img">
-                <div class="card-body">
-                    <h3 class="card-title">Producto 2</h3>
-                    <p class="card-description">Descripción breve del producto.</p>
-                    <div class="card-price">Bs. 80</div>
-                    <button class="card-btn">Comprar</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300x200" alt="Producto" class="card-img">
-                <div class="card-body">
-                    <h3 class="card-title">Producto 2</h3>
-                    <p class="card-description">Descripción breve del producto.</p>
-                    <div class="card-price">Bs. 80</div>
-                    <button class="card-btn">Comprar</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300x200" alt="Producto" class="card-img">
-                <div class="card-body">
-                    <h3 class="card-title">Producto 2</h3>
-                    <p class="card-description">Descripción breve del producto.</p>
-                    <div class="card-price">Bs. 80</div>
-                    <button class="card-btn">Comprar</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300x200" alt="Producto" class="card-img">
-                <div class="card-body">
-                    <h3 class="card-title">Producto 2</h3>
-                    <p class="card-description">Descripción breve del producto.</p>
-                    <div class="card-price">Bs. 80</div>
-                    <button class="card-btn">Comprar</button>
-                </div>
-            </div>
-            <div class="card">
-                <img src="https://via.placeholder.com/300x200" alt="Producto" class="card-img">
-                <div class="card-body">
-                    <h3 class="card-title">Producto 2</h3>
-                    <p class="card-description">Descripción breve del producto.</p>
-                    <div class="card-price">Bs. 80</div>
-                    <button class="card-btn">Comprar</button>
-                </div>
-            </div>
 
+                <!-- Producto 3 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/eeeeee/333333?text=Producto+3" alt="Producto 3" class="card-img" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Producto+3'">
+                    <div class="card-body">
+                        <h3 class="card-title">Producto/Servicio 3</h3>
+                        <p class="card-description">Descripción corta y vendedora.</p>
+                        <div class="card-price">Bs. 150</div>
+                        <a href="contacto.html" class="card-btn">Consultar</a>
+                    </div>
+                </div>
+                
+                <!-- Producto 4 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/eeeeee/333333?text=Producto+4" alt="Producto 4" class="card-img" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Producto+4'">
+                    <div class="card-body">
+                        <h3 class="card-title">Producto/Servicio 4</h3>
+                        <p class="card-description">Descripción corta y vendedora.</p>
+                        <div class="card-price">Bs. 80</div>
+                        <a href="contacto.html" class="card-btn">Consultar</a>
+                    </div>
+                </div>
+                
+                <!-- Producto 5 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/eeeeee/333333?text=Producto+5" alt="Producto 5" class="card-img" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Producto+5'">
+                    <div class="card-body">
+                        <h3 class="card-title">Producto/Servicio 5</h3>
+                        <p class="card-description">Descripción corta y vendedora.</p>
+                        <div class="card-price">Bs. 200</div>
+                        <a href="contacto.html" class="card-btn">Consultar</a>
+                    </div>
+                </div>
+                
+                <!-- Producto 6 -->
+                <div class="card">
+                    <img src="https://placehold.co/600x400/eeeeee/333333?text=Producto+6" alt="Producto 6" class="card-img" onerror="this.src='https://placehold.co/600x400/eeeeee/333333?text=Producto+6'">
+                    <div class="card-body">
+                        <h3 class="card-title">Producto/Servicio 6</h3>
+                        <p class="card-description">Descripción corta y vendedora.</p>
+                        <div class="card-price">Bs. 95</div>
+                        <a href="contacto.html" class="card-btn">Consultar</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 <span class="empresa-placeholder">[Nombre de la Empresa]</span> | Todos los derechos reservados.</p>
+            <p>Diseñado por <span class="tu-empresa-placeholder">[Nombre de Tu Empresa]</span></p>
         </div>
-    </div>
-</main>
+    </footer>
 
-<footer>
-    © 2025 NEXUS WEB | Todos los derechos reservados.
-</footer>
 </body>
 </html>
