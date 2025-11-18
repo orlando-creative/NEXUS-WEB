@@ -276,6 +276,56 @@ ul {
     margin-bottom: 2.5rem;
 }
 
+/* Estilos para la sección completa */
+#tiktok-video-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f8f8f8; /* Fondo suave */
+    border-top: 5px solid #FE2C55; /* Color corporativo de TikTok */
+}
+
+#tiktok-video-section h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+/* Contenedor del video - Es clave para la adaptabilidad */
+.tiktok-video-container {
+    display: flex;
+    justify-content: center; /* Centra el bloque incrustado */
+    margin: 0 auto 30px auto;
+    max-width: 605px; /* Límite de ancho recomendado por TikTok */
+    border-radius: 10px;
+    overflow: hidden; /* Asegura que no se desborde */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+/* Estilos para la información y el botón */
+.tiktok-info p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.tiktok-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #25F4EE; /* Azul brillante de TikTok */
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.tiktok-btn:hover {
+    background-color: #FE2C55; /* Cambio a rojo/rosa de TikTok al pasar el ratón */
+    color: #fff;
+    transform: translateY(-2px);
+}
 /* ===============================
     GRID DE PRODUCTOS Y CARDS
 ================================ */
@@ -559,6 +609,13 @@ ul {
 
 /* Móviles pequeños (hasta 480px) */
 @media (max-width: 480px) {
+    #tiktok-video-section {
+        padding: 20px 10px;
+    }
+
+    #tiktok-video-section h2 {
+        font-size: 1.5em;
+    }
     /* ... (Estilos sin cambios) ... */
     .container {
         padding: 0 1rem;
